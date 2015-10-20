@@ -1,0 +1,41 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.intro-header {
+    text-align: left;
+    color: #f8f8f8;
+    background: #000;
+    background-size: cover;
+    height: 700px;
+    width: 1239px;
+    font-family: Lato;
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+}
+
+.btn-primary.btn {
+    border-color: #ff5a5f;
+    border-bottom-color: #e00007;
+    background-color: #ff5a5f;
+    color: #fff;
+}
+
+.hero__content-footer {
+    background-color: rgba(0,0,0,0.6);
+    bottom: 0;
+    left: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    position: absolute;
+    right: 0;
+}
+
+.text-center {
+    text-align: center
+}
+
