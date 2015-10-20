@@ -1,0 +1,10 @@
+<h1><%= @flat.name %></h1>
+
+<ul class='flat-informations'>
+  <li>Description : <%= @flat.description %></li>
+  <li>Capacity : <%= @flat.capacity %></li>
+  <li>lieu : <%= @flat.city%> - <%=@flat.zip_code%></li>
+  <li>Prix par nuit : <%= @flat.price %></li>
+  <br>
+  <%= link_to "Update", edit_account_flat_path(id: @flat.id) %>
+</ul>

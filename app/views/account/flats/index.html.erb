@@ -1,0 +1,12 @@
+<h1>Mes Flats</h1>
+
+<% @flats.each do |flat| %>
+  <ul class='flat-informations'>
+    <li><%= link_to flat.name,  flat_path(flat) %></li>
+    <li><%= flat.description %></li>
+    <li><%= flat.city %></li>
+    <li><%= flat.price %></li>
+  </ul>
+<%end%>
+
+
