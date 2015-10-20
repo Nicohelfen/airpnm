@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'account/flats#index'
+  root to: 'pages#home'
+
   devise_for :users
 
   resources :flats, only: [:show ] do
