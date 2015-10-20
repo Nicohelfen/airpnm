@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
-
-
-  get 'flat/new'
-
-  get 'flat/create'
-
-  get 'flat/update'
-
-  get 'flat/delete'
-
-  get 'flat/show'
-
   devise_for :users
+
+  resources :flats, only: [:index, :show] do
+    resources :bookings, only: [:new, :create]
+  end
+
+  namespace :account do
+    resources :flats, only: [:index, :new, :create]
+  end
 end
