@@ -1,7 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Flat.create(name: "Manoire du Yeu", capacity: 8, city: "Ile d'yeu", street: "le marais salais", zip_code:"85350", description: "Magnifique maison individuelle au bord de mer", price: 45  )
+Flat.create(name: "Appart jolie joli", capacity: 1, city: "Lille", street: "rue nationnal", zip_code:"59000", description: "Appart bien pourri pour étudient", price: 20  )
+Flat.create(name: "Maison individuelle", capacity: 6, city: "Lille", street: "rue jean sans peur", zip_code:"59000", description: "ideal famille a la rue", price: 80  )
+Flat.create(name: "Chambre chez particuler", capacity: 2, city: "Hem", street: "rue general", zip_code:"59510", description: "Chambre chez particulier avec acces autonome ", price: 50  )
+Flat.create(name: "Ferme rénové", capacity: 10, city: "Baisieux", street: "Rue d'escamin", zip_code:"59780", description: "Superbe ferme en pleine campagne ", price: 110  )

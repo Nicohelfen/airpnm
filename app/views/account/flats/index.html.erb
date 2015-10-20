@@ -1,0 +1,16 @@
+<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+
+<h1>Mes Flats</h1>
+
+<% @flats.each do |f| %>
+<ul class='flat-informations'>
+  <li><%= link_to f.name,  flat_path(id: f.id) %></li>
+  <li><%= f.description %></li>
+  <li><%= f.city %></li>
+  <li><%= f.price %></li>
+
+  <br>
+</ul>
+<%end%>
+
+
