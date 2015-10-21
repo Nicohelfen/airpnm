@@ -5,9 +5,15 @@ Rails.application.routes.draw do
 
   resources :flats, only: [:show ] do
     resources :bookings, only: [:new, :create]
+    # get 'bookings/:booking_id/accept', to: 'bookings#accept', as: :bookings_accept
   end
 
   namespace :account do
     resources :flats, only: [:index, :new, :create, :edit, :update]
+    resources :bookings, only: [:index]  do
+      member do
+        put :accept
+      end
+    end
   end
 end
