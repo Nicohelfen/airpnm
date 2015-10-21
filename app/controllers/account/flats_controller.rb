@@ -7,13 +7,18 @@ module Account
     end
 
     def edit
-      @flat = Flat.find(params[:id])
+      @flat = current_user.flats.find(params[:id])
     end
 
     def update
-      @flat = Flat.find(params[:id])
-      @flat.update(params_whitelist)
-      redirect_to flat_path
+      @flat = current_user.flats.find(params[:id])
+      if @flat.update(params_whitelist)
+        flash[:notice] = "Bla bla ok"
+        redirect_to flat_path
+      else
+        flash[:alert] = "Bla bla nok"
+        render :edit
+      end
     end
 
     def new
@@ -23,14 +28,18 @@ module Account
     def create
       flat = Flat.new(params_whitelist)
       flat.owner = current_user
+      flat = current_user.flats.build(params_whitelist)
       flat.save
-      redirect_to flat_path(flat)
+      if flat.valid?
+        redirect_to flat_path(flat)
+      else
+        render :new
+      end
     end
 
-  private
+    private
     def params_whitelist
       params.require(:flat).permit(:name, :description, :city, :zip_code, :street, :capacity, :price)
     end
-
   end
 end

@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :flats, only: [:show ] do
     resources :bookings, only: [:new, :create]
   end
-
   namespace :account do
     resources :flats, only: [:index, :new, :create, :edit, :update]
     resources :bookings, only: [:index]  do
@@ -14,5 +13,7 @@ Rails.application.routes.draw do
         put :accept
       end
     end
+
   end
 end
+

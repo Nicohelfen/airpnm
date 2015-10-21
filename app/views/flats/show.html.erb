@@ -5,6 +5,7 @@
   <li>Capacity : <%= @flat.capacity %></li>
   <li>lieu : <%= @flat.city%> - <%=@flat.zip_code%></li>
   <li>Prix par nuit : <%= @flat.price %></li>
+  <li><%= image_tag @flat.picture.url(:medium) %></li>
   <br>
-  <%= link_to "Update", edit_account_flat_path(id: @flat.id) %>
+  <%= link_to "Update", edit_account_flat_path(@flat) %>
 </ul>
