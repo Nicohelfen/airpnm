@@ -11,20 +11,20 @@
 </div>
 
 
-<div class="hero__content-footer hide-sm">
-  <form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Where do you want to go?">
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Check-in">
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Check-out">
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Travellers">
-    </div>
-    <button type="submit" class="btn-primary btn">Search</button>
-  </form>
+<div class="hero__content-footer hide-sm ">
+  <%= form_tag(flats_path, method: :get, class: "navbar-form navbar-left" )  do %>
+  <div class="form-group">
+   <%= text_field_tag(:city, nil, placeholder: "Where do you want to go?", class:"form-control") %>
+  </div>
+  <div class="form-group">
+    <%= text_field_tag(:checkin, nil, placeholder: "Check-in", class:"form-control") %>
+  </div>
+  <div class="form-group">
+    <%= text_field_tag(:checkout, nil, placeholder: "Check-out", class:"form-control") %>
+  </div>
+  <div class="form-group">
+    <%= text_field_tag(:travellers, nil, placeholder: "Travellers", class:"form-control") %>
+  </div>
+    <%= submit_tag("Search", class:"form-control") %>
+    <% end %>
 </div>

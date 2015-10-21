@@ -1,0 +1,13 @@
+
+
+
+<% @flats.each do |flat| %>
+  <ul class='flat-informations'>
+    <li><%= image_tag flat.picture.url(:medium) %></li>
+    <li><%= link_to flat.name,  flat_path(flat) %></li>
+    <li><%= flat.description %></li>
+    <li><%= flat.city %></li>
+    <li><%= flat.capacity %></li>
+    <li><%= flat.price %></li>
+  </ul>
+<%end%>
