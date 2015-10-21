@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   end
 
   namespace :account do
-    root to: "profile#edit"
+    root to: "profile#index"
     resources :flats, only: [:index, :new, :create, :edit, :update]
-    resource :profile, only: [:edit], controller: "profile"
+    resource :profile, only: [:show, :edit], controller: "profile"
     resources :bookings, only: [:index]  do
       member do
         put :accept
