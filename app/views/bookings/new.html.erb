@@ -1,0 +1,8 @@
+<%= simple_form_for @booking, url: flat_bookings_path do |f| %>
+<%= f.input :check_in %>
+<%= f.input :check_out %>
+<%= f.input :guest_id, value: @booking.guest_id, as: :hidden %>
+
+<%= f.button :submit %>
+
+<% end %>
