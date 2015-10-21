@@ -4,13 +4,13 @@
 
 
 .intro-header {
-    text-align: left;
-    color: #f8f8f8;
-    background: #000;
-    background-size: cover;
-    height: 700px;
-    width: 1239px;
-    font-family: Lato;
+  text-align: left;
+  color: #f8f8f8;
+  background: #000;
+  background-size: cover;
+  height: 700px;
+  width: 1239px;
+  font-family: Lato;
 }
 
 h1 {
@@ -19,23 +19,38 @@ h1 {
 }
 
 .btn-primary.btn {
-    border-color: #ff5a5f;
-    border-bottom-color: #e00007;
-    background-color: #ff5a5f;
-    color: #fff;
+  border-color: #ff5a5f;
+  border-bottom-color: #e00007;
+  background-color: #ff5a5f;
+  color: #fff;
 }
 
 .hero__content-footer {
-    background-color: rgba(0,0,0,0.6);
-    bottom: 0;
-    left: 0;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    position: absolute;
-    right: 0;
+  background-color: rgba(0,0,0,0.6);
+  bottom: 0;
+  left: 0;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  position: absolute;
+  right: 0;
+}
+
+.navbar-form.navbar-left {
+  float:none;
+  text-align:center;
+
+
 }
 
 .text-center {
-    text-align: center
+  text-align: center
 }
 
+.img-circle {
+  border-radius: 50%;
+  width: 50px;
+}
+
+#logo {
+  width: 50px
+}
