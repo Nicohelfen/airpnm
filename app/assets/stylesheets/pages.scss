@@ -10,7 +10,10 @@
     background-size: cover;
     height: 700px;
     width: 1239px;
-    font-family: Lato;
+    font-family: Raleway;
+    padding-top: 250px;
+    padding-right:500px;
+    padding-left:280px;
 }
 
 h1 {
@@ -39,3 +42,28 @@ h1 {
     text-align: center
 }
 
+.navbar-form {
+  text-align: center
+}
+
+
+.text-jumbo {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.space-1 {
+    margin-bottom: 6.25px;
+}
+
+#logo {
+  width: 50px
+}
+
+.img-circle {
+  border-radius: 50%,
+}
+
+.img-avatar {
+  width: 50px
+}
