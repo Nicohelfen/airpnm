@@ -1,5 +1,7 @@
 module Account
   class FlatsController < ApplicationController
+    before_action :authenticate_user!
+
     def index
       @flats = current_user.flats
     end
@@ -10,8 +12,7 @@ module Account
 
     def update
       @flat = current_user.flats.find(params[:id])
-
-      if @flat.update(whitelist)
+      if @flat.update(params_whitelist)
         flash[:notice] = "Bla bla ok"
         redirect_to flat_path
       else
@@ -25,9 +26,11 @@ module Account
     end
 
     def create
-      flat = current_user.flats.build(whitelist)
-
-      if flat.save
+      flat = Flat.new(params_whitelist)
+      flat.owner = current_user
+      flat = current_user.flats.build(params_whitelist)
+      flat.save
+      if flat.valid?
         redirect_to flat_path(flat)
       else
         render :new
@@ -35,9 +38,8 @@ module Account
     end
 
     private
-
-    def whitelist
-      params.require(:flat).permit(:name, :description, :city, :zip_code, :street, :capacity, :price, :picture)
+    def params_whitelist
+      params.require(:flat).permit(:name, :description, :city, :zip_code, :street, :capacity, :price)
     end
   end
 end
