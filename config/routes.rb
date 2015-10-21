@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :flats, only: [:show ] do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create, :index]
+    get 'bookings/:booking_id/accept', to: 'bookings#accept', as: :bookings_accept
   end
 
   namespace :account do
