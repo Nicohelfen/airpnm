@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   end
 
   namespace :account do
-    resources :flats, only: [:index, :new, :create, :edit, :update]
+    root to: 'dashboards#show'
+
+    resource  :dashboard, only: [:show]
+    resource  :profile,   only: [:show, :edit, :update]
+
+    resources :flats,     only: [:index, :new, :create, :edit, :update]
   end
 end
+
