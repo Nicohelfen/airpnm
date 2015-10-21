@@ -1,0 +1,22 @@
+<!-- BR TEMPORTAIRE -->
+<br>
+<br>
+<br>
+<h3>My bookings</h3>
+<ul>
+  <% @bookings_to_me.each do |b| %>
+  <li>check in: <%= b.check_in %>  -- check out: <%= b.check_out %> from <%= User.find(b.flat.owner).email %>.</li>
+  <% end %>
+</ul>
+<h3>Bookings from Others</h3>
+<br>
+<br>
+<ul>
+  <% @bookings_from_other.each do |b| %>
+  <% if b.status == "Waiting" %>
+  <li>check in: <%= b.check_in %>  -- check out: <%= b.check_out %> by: <%= User.find(b.guest).email %>. <%= link_to 'Acept', accept_account_booking_path(b), method: "put" %></li>
+  <% else %>
+  <li>check in: <%= b.check_in %>  -- check out: <%= b.check_out %> by: <%= User.find(b.guest).email %>.</li>
+  <% end %>
+  <% end %>
+</ul>

@@ -4,17 +4,18 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :flats, only: [:show ] do
-    resources :bookings, only: [:new, :create, :index]
-    get 'bookings/:booking_id/accept', to: 'bookings#accept', as: :bookings_accept
+    resources :bookings, only: [:new, :create]
+
   end
 
   namespace :account do
-    root to: 'dashboards#show'
+    resources :flats, only: [:index, :new, :create, :edit, :update]
+    resources :bookings, only: [:index]  do
+      member do
+        put :accept
+      end
+    end
 
-    resource  :dashboard, only: [:show]
-    resource  :profile,   only: [:show, :edit, :update]
-
-    resources :flats,     only: [:index, :new, :create, :edit, :update]
   end
 end
 
