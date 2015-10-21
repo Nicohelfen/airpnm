@@ -1,21 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_whitelist, only: [:create]
   before_action :authenticate_user!
-  before_action :set_flat, only: [:index, :accept, :new, :create]
-
-  def index
-    if @flat && @flat.owner == current_user
-      @bookings = @flat.bookings
-    end
-  end
-
-  def accept
-    if current_user == @flat.owner
-      booking = Booking.find(params[:booking_id])
-      booking.update(status: "OK")
-    end
-    redirect_to flat_bookings_path
-  end
+  before_action :set_flat, only: [:new, :create]
 
   def new
     @booking = @flat.bookings.build(guest: current_user, flat: @flat)

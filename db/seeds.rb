@@ -11,4 +11,4 @@ f4 = Flat.create!(owner: u4, name: "Chambre chez particuler", capacity: 2, city:
 f5 = Flat.create!(owner: u5, name: "Ferme rénové", capacity: 10, city: "Baisieux", street: "Rue d'escamin", zip_code:"59780", description: "Superbe ferme en pleine campagne", price: 110  )
 f6 = Flat.create!(owner: u5, name: "Magnifique pension", capacity: 15, city: "Lille", street: "Rue lesquin", zip_code:"59000", description: "Magnifique pension !", price: 150  )
 
-Booking.create!(check_in: "2015-10-21", check_out: "2015-10-25", guest: u1, flat: f1, status: "Waiting")
+Booking.create!(check_in: "2015-10-21", check_out: "2015-10-25", guest: u2, flat: f1, status: "Waiting")

@@ -1,9 +1,0 @@
-<ul>
-  <% @bookings.each do |b| %>
-  <% if b.status == "Waiting" %>
-  <li>check in: <%= b.check_in %>  -- check out: <%= b.check_out %> by: <%= User.find(b.guest_id).email %>. <%= link_to 'Acept', flat_bookings_accept_path(b.flat, b) %></li>
-  <% else %>
-  <li>check in: <%= b.check_in %>  -- check out: <%= b.check_out %> by: <%= User.find(b.guest_id).email %>.</li>
-  <% end %>
-  <% end %>
-</ul>
