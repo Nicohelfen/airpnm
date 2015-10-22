@@ -1,11 +1,34 @@
-<h1><%= @flat.name %></h1>
-
-<ul class='flat-informations'>
-  <li>Description : <%= @flat.description %></li>
-  <li>Capacity : <%= @flat.capacity %></li>
-  <li>lieu : <%= @flat.city%> - <%=@flat.zip_code%></li>
-  <li>Prix par nuit : <%= @flat.price %></li>
-  <li><%= image_tag @flat.picture.url(:medium) %></li>
-  <br>
-  <%= link_to "Update", edit_account_flat_path(@flat) %>
-</ul>
+<div id="flat" class="text-center">
+  <div id="space-navbar"> </div>
+  <div class="container card">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h1><%= @flat.name %></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <% if @flat.picture.instance.picture_file_name %>
+        <%= image_tag @flat.picture.url %>
+        <% else %>
+        <%= image_tag "300px-No_image_available.png" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p><strong>Description</strong> : <%= @flat.description %></p>
+      </div>
+      <div class="col-sm-12">
+        <p><strong>Capacity</strong> : <%= @flat.capacity %></p>
+      </div>
+      <div class="col-sm-12">
+        <p><strong>Lieu</strong> : <%= @flat.city %> - <%=@flat.zip_code%></p>
+      </div>
+      <div class="col-sm-12">
+        <p><strong>Prix par nuit</strong> : <%= @flat.price %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="space-navbar"></div>
