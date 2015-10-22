@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
@@ -20,7 +20,7 @@ gem 'simple_form'
 gem "autoprefixer-rails"
 gem 'aws-sdk', '< 2.0'
 gem 'paperclip'
-gem 'figaro'
+
 gem 'devise'
 
 
@@ -32,7 +32,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'omniauth-facebook'
+gem 'omniauth-oauth2', '1.3.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
