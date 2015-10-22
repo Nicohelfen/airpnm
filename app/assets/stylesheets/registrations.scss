@@ -1,0 +1,24 @@
+#signup {
+  position: absolute;
+  background:  image-url("dont_just_stand_there.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+
+@media all and (min-width: 640px) {
+  #signup > .container {
+    margin-top: 150px;
+  }
+}
+
+#signup > .container {
+  background-color: rgba(221, 215, 203, 0.5);
+  border-radius: 1%;
+}
+
