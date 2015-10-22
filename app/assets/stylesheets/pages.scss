@@ -3,19 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.intro-header {
-  text-align: left;
+#home {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
   color: #f8f8f8;
   background: #000;
   background-size: cover;
-  height: 700px;
-  width: 1239px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: Lato;
+  background: url("https://unsplash.it/1920/1080?image=563") no-repeat center center fixed;
 }
 
 h1 {
   color: white;
   font-weight: bold;
+  font-size: 48px
 }
 
 .btn-primary.btn {
@@ -35,22 +43,13 @@ h1 {
   right: 0;
 }
 
-.navbar-form.navbar-left {
-  float:none;
-  text-align:center;
-
-
-}
-
-.text-center {
-  text-align: center
-}
-
-.img-circle {
-  border-radius: 50%;
+#logo {
   width: 50px;
 }
 
-#logo {
-  width: 50px
+.text-vertical-center{
+  text-align: center;
+  color: white;
+  padding-top: 250px;
 }
+

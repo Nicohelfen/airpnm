@@ -1,20 +1,19 @@
 
 
-<div class="intro-header" style="background-image: url(https://unsplash.it/1239/450?image=864">
+<div id="home" >
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-        <h1>Welcome Home </h1>
+      <div class="col-sm-12 text-vertical-center">
+        <h1> Feel at home everywhere </h1>
       </div>
     </div>
   </div>
 </div>
 
-
-<div class="hero__content-footer hide-sm ">
-  <%= form_tag(flats_path, method: :get, class: "navbar-form navbar-left" )  do %>
+<div class="hero__content-footer text-center hide-sm ">
+  <%= form_tag(flats_path, method: :get, class: "navbar-form" )  do %>
   <div class="form-group">
-   <%= text_field_tag(:city, nil, placeholder: "Where do you want to go?", class:"form-control") %>
+    <%= text_field_tag(:city, nil, placeholder: "Where do you go?", class:"form-control") %>
   </div>
   <div class="form-group">
     <%= text_field_tag(:checkin, nil, placeholder: "Check-in", class:"form-control") %>
@@ -25,6 +24,6 @@
   <div class="form-group">
     <%= text_field_tag(:travellers, nil, placeholder: "Travellers", class:"form-control") %>
   </div>
-    <%= submit_tag("Search", class:"form-control") %>
-    <% end %>
+  <%= submit_tag("Search", class:"form-control") %>
+  <% end %>
 </div>
