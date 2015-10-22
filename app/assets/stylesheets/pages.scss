@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 #home {
   position:absolute;
   top:0;
@@ -16,7 +15,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: Lato;
+  font-family: 'Open Sans', sans-serif;
   background: url("https://unsplash.it/1920/1080?image=563") no-repeat center center fixed;
 }
 
@@ -51,5 +50,22 @@ h1 {
   text-align: center;
   color: white;
   padding-top: 250px;
+}
+
+.navbar-form {
+  text-align: center
+}
+
+#logo {
+  width: 50px;
+}
+
+.img-circle {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.img-avatar {
+  width: 50px
 }
 
