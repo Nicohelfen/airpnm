@@ -1,3 +1,25 @@
 .form-control {
   height:45px;
 }
+
+.navbar-default {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-default .navbar-nav li a {
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+
+.dropdown-menu li a {
+  color: rgb(4, 4, 5) !important;
+}
+
+.btn.btn-default.dropdown-toggle {
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}

@@ -15,7 +15,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: Lato;
+  font-family: 'Open Sans', sans-serif;
   background: url("https://unsplash.it/1920/1080?image=563") no-repeat center center fixed;
 }
 
@@ -56,24 +56,16 @@ h1 {
   text-align: center
 }
 
-
-.text-jumbo {
-    font-size: 60px;
-    font-weight: 700;
-}
-
-.space-1 {
-    margin-bottom: 6.25px;
-}
-
 #logo {
-  width: 50px
+  width: 50px;
 }
 
 .img-circle {
-  border-radius: 50%,
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 .img-avatar {
   width: 50px
 }
+
