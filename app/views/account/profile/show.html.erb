@@ -1,1 +1,15 @@
-<h1>RECAPITULATION DES INFOS</h1>
+
+<div id="profile" >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <%= image_tag current_user.picture, class: "image-profile"%>
+      </div>
+      <div class="col-lg-9 col-md-12">
+        <h1> Hello! my name is <%= current_user.first_name %></h1>
+        <h3> <%= current_user.email %></h3>
+      </div>
+  </div>
+</div>
+
+
