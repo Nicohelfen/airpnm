@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users, expect: [:sessions]
 
-  resources :flats, only: [:show ] do
+  resources :flats, only: [:show, :index ] do
     resources :bookings, only: [:new, :create]
   end
 

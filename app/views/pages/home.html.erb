@@ -1,31 +1,29 @@
 
 
-<div class="intro-header" style="background-image: url(https://unsplash.it/1239/450?image=563">
+<div id="home" >
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-        <div class="text-branding text-jumbo text-contrast space-1">
-          Feel at home everywhere
-        </div>
+      <div class="col-sm-12 text-vertical-center">
+        <h1> Feel at home everywhere </h1>
       </div>
     </div>
   </div>
 </div>
 
-<div class="hero__content-footer hide-sm">
-  <form class="navbar-form navbar-center" role="search">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Where do you go?">
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Check-in">
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Check-out">
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Travellers">
-    </div>
-    <button type="submit" class="btn-primary btn">Search</button>
-  </form>
+<div class="hero__content-footer text-center hide-sm ">
+  <%= form_tag(flats_path, method: :get, class: "navbar-form" )  do %>
+  <div class="form-group">
+    <%= text_field_tag(:city, nil, placeholder: "Where do you go?", class:"form-control") %>
+  </div>
+  <div class="form-group">
+    <%= text_field_tag(:checkin, nil, placeholder: "Check-in", class:"form-control") %>
+  </div>
+  <div class="form-group">
+    <%= text_field_tag(:checkout, nil, placeholder: "Check-out", class:"form-control") %>
+  </div>
+  <div class="form-group">
+    <%= text_field_tag(:travellers, nil, placeholder: "Travellers", class:"form-control") %>
+  </div>
+  <%= submit_tag("Search", class:"form-control") %>
+  <% end %>
 </div>

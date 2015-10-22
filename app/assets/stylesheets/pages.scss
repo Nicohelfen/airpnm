@@ -2,44 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-.intro-header {
-    text-align: left;
-    color: #f8f8f8;
-    background: #000;
-    background-size: cover;
-    height: 700px;
-    width: 1239px;
-    font-family: Raleway;
-    padding-top: 250px;
-    padding-right:500px;
-    padding-left:280px;
+#home {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  color: #f8f8f8;
+  background: #000;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: Lato;
+  background: url("https://unsplash.it/1920/1080?image=563") no-repeat center center fixed;
 }
 
 h1 {
   color: white;
   font-weight: bold;
+  font-size: 48px
 }
 
 .btn-primary.btn {
-    border-color: #ff5a5f;
-    border-bottom-color: #e00007;
-    background-color: #ff5a5f;
-    color: #fff;
+  border-color: #ff5a5f;
+  border-bottom-color: #e00007;
+  background-color: #ff5a5f;
+  color: #fff;
 }
 
 .hero__content-footer {
-    background-color: rgba(0,0,0,0.6);
-    bottom: 0;
-    left: 0;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    position: absolute;
-    right: 0;
+  background-color: rgba(0,0,0,0.6);
+  bottom: 0;
+  left: 0;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  position: absolute;
+  right: 0;
 }
 
-.text-center {
-    text-align: center
+#logo {
+  width: 50px;
+}
+
+.text-vertical-center{
+  text-align: center;
+  color: white;
+  padding-top: 250px;
 }
 
 .navbar-form {
