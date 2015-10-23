@@ -1,9 +1,25 @@
-<%= simple_form_for @profile, url: url do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email %>
-  <%=f.input :picture %>
 
-  <%= f.button :submit %>
 
-  <% end %>
+
+<div id="edit-user">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2><%= title %></h2>
+      </div>
+    </div>
+    <div class="row form">
+      <div class="col-sm-12">
+        <%= simple_form_for @profile, url: url do |f| %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :email %>
+        <%=f.input :picture %>
+        <%= f.button :submit %>
+        <% end %>
+        <div id="space-navbar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
   def new
     if current_user != @flat.owner
       @booking = @flat.bookings.build(guest: current_user, flat: @flat)
+      flash[:notice] = "Booking successful !"
     else
       flash[:alert] = "You cannot book your own flat"
       redirect_to flat_path(@flat)
