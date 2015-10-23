@@ -1,6 +1,11 @@
 
 <div id="flats">
   <div id="space-navbar"></div>
+  <div>
+    <%= link_to new_account_flat_path() do %>
+  <button type="button" class="btn btn-primary">Add Flat </button>
+  <% end %>
+</div>
   <div class="row row-centered">
     <% @flats.each do |flat| %>
 
