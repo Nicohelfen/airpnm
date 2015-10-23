@@ -16,13 +16,13 @@
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
-  background: url("https://unsplash.it/1920/1080?image=563") no-repeat center center fixed;
+  background: image-url("home_picture") no-repeat center center fixed;
 }
 
 h1 {
   color: white;
   font-weight: bold;
-  font-size: 48px
+  font-size: 64px
 }
 
 .btn-primary.btn {
@@ -44,6 +44,7 @@ h1 {
 
 #logo {
   width: 50px;
+  color: white
 }
 
 .text-vertical-center{
@@ -54,10 +55,6 @@ h1 {
 
 .navbar-form {
   text-align: center
-}
-
-#logo {
-  width: 50px;
 }
 
 .img-circle {
