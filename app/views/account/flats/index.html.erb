@@ -1,14 +1,35 @@
-<h1>Mes Flats</h1>
 
-<% @flats.each do |flat| %>
-<ul class='flat-informations'>
-  <li><%= image_tag flat.picture.url(:medium) %></li>
-  <li><%= link_to flat.name,  flat_path(flat) %></li>
-  <li><%= flat.description %></li>
-  <li><%= flat.city %></li>
-  <li><%= flat.price %></li>
-  <li> <%= link_to "Update", edit_account_flat_path(flat) %></li>
-</ul>
-<%end%>
+<div id="flats">
+  <div id="space-navbar"></div>
+  <div class="row row-centered">
+    <% @flats.each do |flat| %>
 
+    <div class="col-sm-12 col-md-6 col-centered col-fixed">
+     <%= link_to flat_path(flat) do %>
+     <% if flat.picture.instance.picture_file_name %>
+     <%= image_tag flat.picture.url %>
+     <% else %>
+     <%= image_tag "300px-No_image_available.png" %>
+     <% end %>
+     <br />
+     <ul>
+      <li class="text-center"><%= flat.name %></li>
+      <li>City: <%= flat.city %></li>
+      <li>Capacity: <%= flat.capacity %></li>
+      <li>Price: <%= flat.price %></li>
+    </ul>
+    <% end %>
+  </div>
+  <%end%>
+</div>
+</div>
 
+<% content_for :javascript do %>
+<script>
+$('#flats .col-fixed').hide();
+$($('#flats .col-fixed')[0]).fadeIn();
+$('#flats .col-fixed:hidden').each(function(k, v) {
+  $(v).delay(Math.floor((Math.random() * 2) + 1) * 1000).fadeIn();
+});
+</script>
+<% end %>
