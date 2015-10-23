@@ -1,4 +1,3 @@
-
 <div id="flats">
   <div id="space-navbar"></div>
   <h1 class="text-center">Votre recherche ?</h1>
@@ -23,14 +22,28 @@
   </div>
   <%end%>
 </div>
+<div id="map" style="width: 60%; height: 400px;"></div>
 </div>
 
 <% content_for :javascript do %>
-<script>
+<%= javascript_tag do %>
 $('#flats .col-fixed').hide();
 $($('#flats .col-fixed')[0]).fadeIn();
 $('#flats .col-fixed:hidden').each(function(k, v) {
-  $(v).delay(Math.floor((Math.random() * 2) + 1) * 1000).fadeIn();
+$(v).delay(Math.floor((Math.random() * 2) + 1) * 1000).fadeIn();
 });
-</script>
+<% end %>
+<% end %>
+
+<% content_for(:after_js) do %>
+<%= javascript_tag do %>
+$(document).on('ready', function() {
+handler = Gmaps.build('Google');
+handler.buildMap({ internal: { id: 'map' } }, function(){
+markers = handler.addMarkers(<%= raw @markers.to_json %>);
+handler.bounds.extendWith(markers);
+handler.fitMapToBounds();
+});
+});
+<% end %>
 <% end %>
