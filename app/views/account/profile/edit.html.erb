@@ -1,7 +1,7 @@
 <h1> Update <%= "#{@profile.first_name} #{@profile.last_name}" %> </h1>
 
 
-<%= render 'form', url: account_profile_path  %>
+<%= render 'form', url: account_profile_path, title: "Edit Profile"  %>
 <li><%= image_tag @profile.picture %></li>
 
 
