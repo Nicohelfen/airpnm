@@ -1,6 +1,6 @@
 module Account
   class ProfileController < ApplicationController
-    def show
+    def
     end
 
     def edit
