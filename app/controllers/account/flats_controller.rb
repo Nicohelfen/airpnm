@@ -4,6 +4,7 @@ module Account
 
     def index
       @flats = current_user.flats
+
     end
 
     def edit

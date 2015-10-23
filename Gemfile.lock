@@ -85,6 +85,7 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (4.2.2)
       sass (~> 3.2)
+    geocoder (1.2.11)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hashie (3.4.2)
@@ -222,6 +223,7 @@ DEPENDENCIES
   devise
   figaro
   font-awesome-sass (~> 4.2.0)
+  geocoder
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-facebook
