@@ -1,10 +1,19 @@
-<%= simple_form_for @booking, url: flat_bookings_path do |f| %>
-<%= f.input :check_in %>
-<%= f.input :check_out %>
-<%= f.input :guest_id, value: @booking.guest_id, as: :hidden %>
-<%= f.input :flat_id, value: @booking.guest_id, as: :hidden %>
 
-
-<%= f.button :submit %>
-
-<% end %>
+<div id="booking">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center"><h2>Booking of "<%= @booking.flat.name %>"</h2></div>
+    </div>
+    <div class="row form">
+      <div class="col-sm-12">
+       <%= simple_form_for @booking, url: flat_bookings_path do |f| %>
+       <%= f.input :check_in %>
+       <%= f.input :check_out %>
+       <%= f.input :guest_id, value: @booking.guest_id, as: :hidden %>
+       <%= f.input :flat_id, value: @booking.guest_id, as: :hidden %>
+       <%= f.button :submit %>
+       <% end %>
+     </div>
+   </div>
+ </div>
+</div>
