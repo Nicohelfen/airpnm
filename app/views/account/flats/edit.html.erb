@@ -1,7 +1,4 @@
-<h1> Update <%= @flat.name %> </h1>
-
-
-<%= render 'form', url: account_flat_path  %>
+<%= render 'form', url: account_flat_path, title: "Update #{@flat.name}" %>
 <li><%= image_tag @flat.picture.url(:medium) %></li>
 
 

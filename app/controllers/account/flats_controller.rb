@@ -13,10 +13,10 @@ module Account
     def update
       @flat = current_user.flats.find(params[:id])
       if @flat.update(params_whitelist)
-        flash[:notice] = "Bla bla ok"
+        flash[:notice] = "Update successful"
         redirect_to flat_path
       else
-        flash[:alert] = "Bla bla nok"
+        flash[:alert] = "Update failed"
         render :edit
       end
     end

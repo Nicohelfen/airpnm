@@ -4,7 +4,12 @@ class BookingsController < ApplicationController
   before_action :set_flat, only: [:new, :create]
 
   def new
-    @booking = @flat.bookings.build(guest: current_user, flat: @flat)
+    if current_user != @flat.owner
+      @booking = @flat.bookings.build(guest: current_user, flat: @flat)
+    else
+      flash[:alert] = "You cannot book your own flat"
+      redirect_to flat_path(@flat)
+    end
   end
 
   def create

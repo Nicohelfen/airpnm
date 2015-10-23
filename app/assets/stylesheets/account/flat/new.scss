@@ -1,4 +1,4 @@
-#booking {
+#flat-form {
   position: absolute;
   background:  url("https://unsplash.it/1920/1080/?random") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -10,24 +10,24 @@
   left:0;
   right:0;
   .form {
-    padding: 20px;
+    padding:20px;
   }
-
 }
 
 @media all and (min-width: 640px) {
-  #booking > .container {
+  #flat-form > .container {
     margin-top: 150px;
   }
 }
+
 @media all and (max-width: 640px) {
-  #booking > .container {
+  #flat-form > .container {
     margin-top: 55px;
   }
 }
 
 
-#booking > .container {
+#flat-form > .container {
   background-color: rgba(221, 215, 203, 0.5);
   border-radius: 1%;
 }
