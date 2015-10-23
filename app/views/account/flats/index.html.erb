@@ -3,9 +3,9 @@
   <div id="space-navbar"></div>
   <div>
     <%= link_to new_account_flat_path() do %>
-  <button type="button" class="btn btn-primary">Add Flat </button>
-  <% end %>
-</div>
+    <button type="button" class="btn btn-primary">Add Flat </button>
+    <% end %>
+  </div>
   <div class="row row-centered">
     <% @flats.each do |flat| %>
 
@@ -22,11 +22,15 @@
       <li>City: <%= flat.city %></li>
       <li>Capacity: <%= flat.capacity %></li>
       <li>Price: <%= flat.price %></li>
-    </ul>
-    <% end %>
+      <li> <%= link_to edit_account_flat_path(flat) do %>
+        <button type="button" class="btn btn-primary">Edit</button>
+        <% end %></li>
+      </ul>
+
+      <% end %>
+    </div>
+    <%end%>
   </div>
-  <%end%>
-</div>
 </div>
 
 <% content_for :javascript do %>
