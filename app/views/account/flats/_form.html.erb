@@ -1,13 +1,25 @@
-<%= simple_form_for @flat, url: url do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :city %>
-  <%= f.input :zip_code %>
-  <%= f.input :street %>
-  <%= f.input :capacity %>
-  <%= f.input :price %>
-  <%=f.input :picture %>
+<div id="flat-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2><%= title %></h2>
+      </div>
+    </div>
+    <div class="row form">
+      <div class="col-sm-12">
+        <%= simple_form_for @flat, url: url do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :city %>
+        <%= f.input :zip_code %>
+        <%= f.input :street %>
+        <%= f.input :capacity %>
+        <%= f.input :price %>
+        <%=f.input :picture %>
+        <%= f.button :submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <%= f.button :submit %>
-
-  <% end %>

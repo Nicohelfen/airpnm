@@ -10,13 +10,16 @@
 <body>
   <%= render 'layouts/navbar' %>
   <% if notice %>
-  <p class="notice"><%= notice %></p>
+  <div class="alert alert-success text-center">
+    <strong><%= notice %></strong>
+  </div>
   <% end %>
 
   <% if alert %>
-  <p class="notice"><%= alert %></p>
+  <div class="alert alert-danger text-center">
+    <strong><%= alert %></strong>
+  </div>
   <% end %>
-
   <%= yield %>
   <%= yield :javascript %>
 </body>
