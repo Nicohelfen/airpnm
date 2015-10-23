@@ -3,13 +3,21 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-3 col-md-4">
-        <%= image_tag current_user.picture, class: "image-profile"%>
+        <% if current_user.provider? %>
+        <%= image_tag current_user.picture, class: "image-profile image-circle"%>
+        <% else %>
+        <%= link_to image_tag("fake_avatar.jpg", class: "image-profile image-circle"), root_path %>
+        <% end %>
       </div>
       <div class="col-lg-9 col-md-12">
-        <h1> Hello! my name is <%= current_user.first_name %></h1>
-        <h3> <%= current_user.email %></h3>
+        <h2> Hello! I'm <%= "#{current_user.first_name} #{current_user.last_name}"%></h2>
+        <div class="row-space-top-2">
+          <p>
+            <%= current_user.email %>
+          </p>
+        </div>
+        <%= link_to "Edit my profile", edit_account_profile_path, class: 'btn btn-default' %>
       </div>
+    </div>
   </div>
 </div>
-
-

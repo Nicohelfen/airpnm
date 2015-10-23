@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   namespace :account do
     root to: "profile#index"
     resources :flats, only: [:index, :new, :create, :edit, :update]
-    resource :profile, only: [:show, :edit], controller: "profile"
+    resource :profile, only: [:show, :update, :edit], controller: "profile"
     resources :bookings, only: [:index]  do
       member do
         put :accept
