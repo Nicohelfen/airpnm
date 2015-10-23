@@ -1,6 +1,3 @@
-
-
-
 <% @flats.each do |flat| %>
   <ul class='flat-informations'>
     <li><%= image_tag flat.picture.url(:medium) %></li>
@@ -11,3 +8,19 @@
     <li><%= flat.price %></li>
   </ul>
 <%end%>
+
+<div id="map" style="width: 60%; height: 400px;"></div>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).on('ready', function() {
+      handler = Gmaps.build('Google');
+      handler.buildMap({ internal: { id: 'map' } }, function(){
+        markers = handler.addMarkers(<%= raw @markers.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
+    })
+  <% end %>
+<% end %>
+

@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem "gmaps4rails"
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'font-awesome-sass', '~> 4.2.0'
@@ -24,6 +25,9 @@ gem 'paperclip'
 gem 'devise'
 gem 'geocoder'
 
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
