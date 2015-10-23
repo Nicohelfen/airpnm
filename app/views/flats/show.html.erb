@@ -29,6 +29,9 @@
         <p><strong>Prix par nuit</strong> : <%= @flat.price %></p>
       </div>
     </div>
+    <%= link_to new_flat_booking_path(@flat) do %>
+    <%= image_tag "booking_logo.png", id: "logo-booking" %>
+    <% end %>
   </div>
 </div>
 <div id="space-navbar"></div>
