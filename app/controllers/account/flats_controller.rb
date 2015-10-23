@@ -4,6 +4,7 @@ module Account
 
     def index
       @flats = current_user.flats
+
     end
 
     def edit
@@ -39,7 +40,10 @@ module Account
 
     private
     def params_whitelist
-      params.require(:flat).permit(:name, :description, :city, :zip_code, :street, :capacity, :price)
+      params.require(:flat).permit(:name, :description, :city, :zip_code, :street, :capacity, :price, :address)
     end
+
+
+
   end
 end

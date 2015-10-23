@@ -22,6 +22,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'paperclip'
 gem 'figaro'
 gem 'devise'
+gem 'geocoder'
 
 
 # Use jquery as the JavaScript library
