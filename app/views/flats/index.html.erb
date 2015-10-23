@@ -1,5 +1,7 @@
 
-
+<h1>Votre recherche ?</h1>
+  <h2>Autour de <%= params[:city] %> </h2>
+  <h2>D'une capacité d'au moins <%= params[:travellers].to_i %> personnes </h2>
 
 <% @flats.each do |flat| %>
   <ul class='flat-informations'>
@@ -11,3 +13,4 @@
     <li><%= flat.price %></li>
   </ul>
 <%end%>
+
