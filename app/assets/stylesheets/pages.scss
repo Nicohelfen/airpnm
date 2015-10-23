@@ -15,61 +15,26 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow-y: auto;
   font-family: 'Open Sans', sans-serif;
   background: url("https://unsplash.it/1920/1080?image=563") no-repeat center center fixed;
-}
+  h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 48px
+  }
 
-h1 {
-  color: white;
-  font-weight: bold;
-  font-size: 48px
-}
+  .text-vertical-center{
+    text-align: center;
+    color: white;
+    padding-top: 250px;
+  }
 
-.btn-primary.btn {
-  border-color: #ff5a5f;
-  border-bottom-color: #e00007;
-  background-color: #ff5a5f;
-  color: #fff;
-}
 
-.hero__content-footer {
-  background-color: rgba(0,0,0,0.6);
-  bottom: 0;
-  left: 0;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  position: absolute;
-  right: 0;
-}
 
-#logo {
-  width: 50px;
-}
+  h1 {
+    color: white
+  }
 
-.text-vertical-center{
-  text-align: center;
-  color: white;
-  padding-top: 250px;
-}
 
-.navbar-form {
-  text-align: center
 }
-
-#logo {
-  width: 50px;
-}
-
-.img-circle {
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-.img-avatar {
-  width: 50px
-}
-
-h1 {
-  color: white
-}
-
